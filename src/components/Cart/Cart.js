@@ -1,4 +1,5 @@
 import React from 'react';
+import './Cart.css'
 
 const Cart = (props) => {
     const cart = props.cart;
@@ -22,8 +23,8 @@ const Cart = (props) => {
     const tax = (total/10).toFixed(2);
     const TotalPrice = (total + shipping + Number(tax)).toFixed(2);
     return (
-        <div>
-            <h4>Order Summary: </h4>
+        <div className = "Cart">
+            <h4 style={{color:'#000'}}>Order Summary: </h4>
             <p>Items Ordered: {cart.length}</p>
             <p>Product Price: {(total.toFixed(2))}</p>
             <p><small>Shipping Cost: {shipping}</small></p>
